@@ -1,0 +1,24 @@
+.nav {
+  background-color: #034694;
+}
+
+.slider {
+  margin-bottom: 73px;
+}
+
+.slider h3,
+.slider h5 {
+  text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.slider .caption img {
+  width: 200px !important;
+}
+
+.page-footer {
+  background-color: #034694;
+}
+
+.page-footer .footer-copyright {
+  background-color: #022e61;
+}

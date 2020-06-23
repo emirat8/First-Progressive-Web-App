@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#034694" />
+    <link rel="apple-touch-icon" href="/assets/icon-192x192.png" />
+    <meta charset="UTF-8" />
+    <title>EmiratZ</title>
+    <meta name="description" content="EmiratZ Progressive Web App" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigasi -->
+    <nav class="nav" role="navigation">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo" id="logo-container">EmiratZ</a>
+        <a href="#" class="sidenav-trigger" data-target="nav-mobile">☰</a>
+
+        <ul class="topnav right hide-on-med-and-down"></ul>
+        <ul class="sidenav" id="nav-mobile"></ul>
+      </div>
+    </nav>
+    <!-- Akhir Navigasi -->
+
+    <!-- Konten -->
+    <div class="container" id="body-content"></div>
+
+    <!-- Footer-->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Dicoding Submission</h5>
+            <p class="grey-text text-lighten-4">
+              Untuk memenuhi Submission 1: Aplikasi PWA Pertama.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          © 2020 EmiratZ
+          <a
+            class="grey-text text-lighten-4 right"
+            href="https://www.dicoding.com/"
+            >Dicoding</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/materialize.min.js"></script>
+    <script src="js/nav.js"></script>
+
+    <script>
+      // REGISTER SERVICE WORKER
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then(function () {
+              console.log("Pendaftaran ServiceWorker berhasil");
+            })
+            .catch(function () {
+              console.log("Pendaftaran ServiceWorker gagal");
+            });
+        });
+      } else {
+        console.log("ServiceWorker belum didukung browser ini.");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "EmiratZ Progressive Web App",
+  "short_name": "EmiratZ",
+  "description": "My first PWA",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#034694",
+  "theme_color": "#034694",
+  "icons": [
+    {
+      "src": "/assets/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/assets/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
